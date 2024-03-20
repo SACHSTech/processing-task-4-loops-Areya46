@@ -24,12 +24,57 @@ public class Sketch extends PApplet {
    */
   public void draw() {
 	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
+    background(255, 255, 255);
 
-    stroke(255);
-    line(50, 125, 70, 50);  
+    // Create Grid
+    for(int lineX = 20; lineX <= 200; lineX += 20){
+      stroke(0,0,0);
+      line(lineX, 0, lineX, 200);
+    }  
+
+    for(int lineY = 20; lineY <= 200; lineY += 20){
+      stroke(0,0,0);
+      line(0, lineY, 200, lineY);
+    }
+
+    // Circles
+    for(int circleY = 30; circleY <= 200; circleY += 35){
+      for(int circleX = 230; circleX <= 400; circleX += 35){
+        fill(212, 15, 125);
+        ellipse(circleX, circleY, 20, 20);
+      }
+    }
+
+    // Gradient
+    double colour = 0;
+
+    for(int lineX = 0; lineX <= 200; lineX ++){      
+      line(lineX, 200, lineX, 400);
+
+      colour += 1.25;
+      stroke((int)colour, (int)colour, (int)(colour));
+    }  
+
+    // Flower      
+
+       // Leaves
+      for(int i = 0; i < 2; i++){
+        rotate(radians(45*i));
+        fill(219, 84, 37);
+        stroke(0,0,0);
+        ellipse(424*sin(radians(45+45*i)), 424*cos(radians(45+45*i)), 18, 125);
+
+        fill(219, 84, 37);
+        stroke(0,0,0);
+        ellipse(424*sin(radians(45+45*i)), 424*cos(radians(45+45*i)), 125, 18);
+      }
+         //resets the coordinate system
+        rotate(radians(315));
+
+        // center of folower
+        fill(37, 108, 45);
+        ellipse(300,300,35,35);
+
   }
   
   // define other methods down here.
