@@ -27,6 +27,7 @@ public class Sketch extends PApplet {
     background(255, 255, 255);
 
     // Create Grid
+  
     for(int lineX = 20; lineX < 200; lineX += 20){
       stroke(0,0,0);
       line(lineX, 0, lineX, 200);
@@ -58,16 +59,15 @@ public class Sketch extends PApplet {
     // Flower      
     
       // Leaves
-      
       for(int i = 0; i < 2; i++){
-        rotate(radians(45*i));
+        rotate(radians(45 * i));
         fill(219, 84, 37);
         stroke(0, 0, 0);
-        ellipse(424*sin(radians(45+45*i)), 424*cos(radians(45+45*i)), 18, 125);
+        ellipse(424 * sin(radians(45 + 45 * i)), 424 * cos(radians(45 + 45 * i)), 18, 125);
 
         fill(219, 84, 37);
         stroke(0, 0, 0);
-        ellipse(424*sin(radians(45+45*i)), 424*cos(radians(45+45*i)), 125, 18);
+        ellipse(424 * sin(radians(45 + 45 * i)), 424 * cos(radians(45 + 45 * i)), 125, 18);
       }
 
       // Reset the coordinate system
